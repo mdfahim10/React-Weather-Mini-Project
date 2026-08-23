@@ -1,0 +1,14 @@
+.weather-app {
+    width: 120%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.weather-app__heading {
+    margin: 10px 0 35px;
+    color: #242427;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
