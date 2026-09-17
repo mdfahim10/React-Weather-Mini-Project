@@ -31,16 +31,20 @@ export default function SearchBox({ updateWeatherInfo }) {
         setCity(event.target.value);
     };
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            const newWeatherInfo = await fetchWeather();
-            updateWeatherInfo(newWeatherInfo);
-            setError(false);
-            setCity("");
-        } catch (error) {
-            setError(true);
-        }
-    };
+    event.preventDefault();
+
+    try {
+        const newWeatherInfo = await fetchWeather();
+
+        updateWeatherInfo(newWeatherInfo);
+        setError(false);
+        setCity("");
+
+    } catch (error) {
+        console.error("Weather API Error:", error);
+        setError(true);
+    }
+};
     return (
         <div className="search-box">
             <form
